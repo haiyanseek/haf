@@ -1,0 +1,95 @@
+{
+ "division": [
+  {
+   "gap_kinds": 1,
+   "gap_kind_names": [
+    "citation"
+   ],
+   "actions": 1,
+   "entropy": 0.0,
+   "theoretical_max": 0.0,
+   "top_action_share": 1.0
+  },
+  {
+   "gap_kinds": 2,
+   "gap_kind_names": [
+    "citation",
+    "control"
+   ],
+   "actions": 2,
+   "entropy": 0.995,
+   "theoretical_max": 1.0,
+   "top_action_share": 0.5417
+  },
+  {
+   "gap_kinds": 3,
+   "gap_kind_names": [
+    "citation",
+    "control",
+    "repro"
+   ],
+   "actions": 3,
+   "entropy": 1.5832,
+   "theoretical_max": 1.585,
+   "top_action_share": 0.3538
+  },
+  {
+   "gap_kinds": 5,
+   "gap_kind_names": [
+    "citation",
+    "control",
+    "repro",
+    "limitation",
+    "number"
+   ],
+   "actions": 5,
+   "entropy": 2.2889,
+   "theoretical_max": 2.3219,
+   "top_action_share": 0.2429
+  },
+  {
+   "gap_kinds": 8,
+   "gap_kind_names": [
+    "citation",
+    "control",
+    "repro",
+    "limitation",
+    "number",
+    "crossref",
+    "method",
+    "risk"
+   ],
+   "actions": 8,
+   "entropy": 2.8948,
+   "theoretical_max": 3.0,
+   "top_action_share": 0.2046
+  }
+ ],
+ "judge": [
+  {
+   "scenario": "无判据 + 无素材",
+   "accepted_fabricated_rate": 0.8125,
+   "accepted_honest_rate": 0.1875
+  },
+  {
+   "scenario": "只查格式 + 无素材",
+   "accepted_fabricated_rate": 0.8125,
+   "accepted_honest_rate": 0.0
+  },
+  {
+   "scenario": "真核验 + 无素材",
+   "accepted_fabricated_rate": 0.0,
+   "accepted_honest_rate": 0.0
+  },
+  {
+   "scenario": "只查格式 + 有素材",
+   "accepted_fabricated_rate": 0.0,
+   "accepted_honest_rate": 1.0
+  },
+  {
+   "scenario": "真核验 + 有素材",
+   "accepted_fabricated_rate": 0.0,
+   "accepted_honest_rate": 1.0
+  }
+ ]
+}
