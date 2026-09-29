@@ -132,6 +132,26 @@ def main():
     else:
         print("  [3/4] 序号与日期连续 ...... ✓ 1..%d 无跳号、无重复日" % len(chain))
 
+    # ── ③b 日期缺口：**如实呈现，不算篡改** ──
+    #  机器关着就没记录，这是事实信息，不是被改过的证据；
+    #  把它和「hash 不符」混成同一等级，会让日报天天误报（机器一休眠就报"链失效"）。
+    miss = []
+    try:
+        from datetime import date, timedelta
+        ds = sorted(date.fromisoformat(d) for d in dates)
+        for i in range(1, len(ds)):
+            d = ds[i - 1] + timedelta(days=1)
+            while d < ds[i]:
+                miss.append(d.isoformat())
+                d += timedelta(days=1)
+    except Exception:
+        pass
+    if miss:
+        print("  附注: 有 %d 天没有记录（机器关着就会这样，属事实不属篡改）：%s"
+              % (len(miss), ", ".join(miss[:6]) + ("…" if len(miss) > 6 else "")))
+    else:
+        print("  附注: 逐日无缺（每条记录之间的日期是连着的）")
+
     # ── ④ 链头锚定 ──
     head = chain[-1].get("hash")
     if a.head:
