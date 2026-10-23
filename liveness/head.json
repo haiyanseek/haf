@@ -1,9 +1,9 @@
 {
-  "head_hash": "ca9744a7d03b3fa2248e65105ee784dc2fce9bfab64a7f6d2953c93591fe305c",
-  "records": 15,
+  "head_hash": "5557b1f629ff6dfd02615caac5a8ca2385b9fa223234ca547fd7dd43e2b58a0f",
+  "records": 16,
   "first_day": "2026-09-29",
-  "last_day": "2026-10-22",
-  "generated_at": "2026-10-22 23:50:42+0800",
+  "last_day": "2026-10-23",
+  "generated_at": "2026-10-23 23:50:21+0800",
   "canonical_recipe": "canonical JSON = json.dumps(payload, sort_keys=True, separators=(',',':'), ensure_ascii=False) then .encode('utf-8'); hash = sha256( prev_hash_bytes + canonical_bytes ).hexdigest(); genesis prev_hash = 64 个 '0'",
   "verify_with": "python3 verify_liveness.py --chain chain.jsonl --head <head_hash>"
 }
